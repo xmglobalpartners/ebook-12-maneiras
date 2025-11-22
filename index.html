@@ -20,14 +20,15 @@
   }
 
   html,body{height:100%;margin:0;background:var(--bg);color:var(--white)}
-  /* FLAG BACKGROUND (soft, translucent) - uses flag-mozambique.png in repo root */
+  /* FLAG BACKGROUND (soft, translucent) - uses uploaded file path */
   body::before{
     content:"";
     position:fixed;inset:0;
-    background-image: url('flag-mozambique.png');
+    /* local uploaded file path (will be transformed to a URL when deployed) */
+    background-image: url('/mnt/data/DB1D2D7B-4845-46AB-8A62-A194E6211CEE.jpeg');
     background-size:cover;
     background-position:center;
-    opacity:0.10;
+    opacity:0.28; /* increased opacity as requested */
     filter: contrast(.95) saturate(.9) blur(0.4px);
     z-index:0;
     pointer-events:none;
@@ -257,13 +258,14 @@
     if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
   }
 
+  // Improved WhatsApp message (clean & professional)
   document.getElementById('whatsapp-btn').addEventListener('click', function(e){
     e.preventDefault();
     const message = encodeURIComponent(
-      "Olá — já efectuei o pagamento do ebook (499 MT)." +
-      "\\nMétodo: (M-Pesa / mMola / M-BIM)." +
-      "\\nTitular: " + HOLDER + "." +
-      "\\nVou enviar o comprovativo neste chat. Obrigado."
+      "Olá! Já efectuei o pagamento do ebook (499 MT)." +
+      "\nMétodo utilizado: M-Pesa / mMola / M-BIM" +
+      "\nTitular: " + HOLDER +
+      "\nVou enviar o comprovativo neste chat. Obrigado."
     );
     const seller = SELLER.replace(/\+/g,'');
     window.open("https://wa.me/" + seller + "?text=" + message, "_blank");
