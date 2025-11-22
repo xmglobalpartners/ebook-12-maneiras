@@ -276,13 +276,10 @@
   document.getElementById('whatsapp-btn').addEventListener('click', function(e){
     e.preventDefault();
     const message = encodeURIComponent(
-      "Olá — já efectuei o pagamento do ebook (499 MT)." +
-      -
-      " Método: (M-Pesa / mMola / M-BIM)." +
-      -
-      " Titular: " + HOLDER + "." +
-      -
-      " Vou enviar o comprovativo neste chat. Obrigado."
+     "Olá — já efectuei o pagamento do ebook (499 MT).\n" +
+  "Método: (M-Pesa / M-Mola / M-BIM).\n" +
+  "Titular: Jean Charles.\n" +
+  "Vou enviar o comprovativo neste chat. Obrigado."
     );
     const seller = SELLER.replace(/\+/g,'');
     window.open("https://wa.me/" + seller + "?text=" + message, "_blank");
