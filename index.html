@@ -3,12 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>12 Maneiras Reais — Versão Premium</title>
+<title>12 Maneiras Reais — Versão Ultra Premium</title>
 <meta name="description" content="Guia prático para ganhar dinheiro online em Moçambique — Pagamento 499 MT. Envie comprovativo via WhatsApp." />
-<link rel="preload" href="promo.png" as="image">
-
 <style>
-  /* ===== Root / Theme ===== */
   :root{
     --bg:#071217;
     --panel: rgba(255,255,255,0.03);
@@ -20,80 +17,49 @@
     --radius:14px;
     --maxwidth:980px;
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
   }
 
-  /* ===== Page background with Mozambique flag (soft opacity) =====
-     Using your uploaded image path (keeps file inside repo).
-  */
   html,body{height:100%;margin:0;background:var(--bg);color:var(--white)}
+  /* FLAG BACKGROUND (soft, translucent) - uses flag-mozambique.png in repo root */
   body::before{
     content:"";
     position:fixed;inset:0;
-    background-image: url('/mnt/data/A_digital_graphic_payment_instruction_graphic_prom.png');
+    background-image: url('flag-mozambique.png');
     background-size:cover;
     background-position:center;
-    opacity:0.10; /* subtle flag overlay */
+    opacity:0.10;
     filter: contrast(.95) saturate(.9) blur(0.4px);
     z-index:0;
     pointer-events:none;
   }
 
-  /* ===== Container ===== */
-  .wrap{position:relative;z-index:1;max-width:var(--maxwidth);margin:22px auto;padding:26px;border-radius:18px;background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.5));box-shadow:0 20px 60px rgba(2,6,23,0.6);overflow:hidden}
-
-  /* ===== Layout ===== */
+  .wrap{position:relative;z-index:1;max-width:var(--maxwidth);margin:22px auto;padding:26px;border-radius:18px;background:linear-gradient(180deg, rgba(0,0,0,0.36), rgba(0,0,0,0.54));box-shadow:0 20px 60px rgba(2,6,23,0.6);overflow:hidden}
   .hero{display:flex;gap:22px;align-items:center;justify-content:space-between}
   .hero-left{flex:1 1 420px}
-  h1{font-size:30px;line-height:1.02;margin:0 0 10px;color:linear-gradient(var(--gold1),var(--gold2));}
+  h1{font-size:30px;line-height:1.02;margin:0 0 10px;color:var(--gold1)}
   .lead{color:var(--muted);margin:0 0 14px;font-size:15px}
-
-  .badge{
-    display:inline-block;padding:10px 14px;border-radius:12px;font-weight:800;background:linear-gradient(90deg,var(--gold1),var(--gold2));color:#081217;margin-right:12px;
-    box-shadow:0 8px 30px rgba(184,134,40,0.12);
-  }
-
-  /* Gradient gold CTA */
-  .btn-cta{
-    display:inline-block;padding:12px 18px;border-radius:12px;color:#081217;font-weight:800;text-decoration:none;border:0;background:linear-gradient(180deg,var(--gold1),var(--gold2));box-shadow:0 12px 30px rgba(184,134,40,0.14);
-    transition:transform .16s ease,box-shadow .16s ease;
-  }
+  .badge{display:inline-block;padding:10px 14px;border-radius:12px;font-weight:800;background:linear-gradient(90deg,var(--gold1),var(--gold2));color:#081217;margin-right:12px;box-shadow:0 8px 30px rgba(184,134,40,0.12)}
+  .btn-cta{display:inline-block;padding:12px 18px;border-radius:12px;color:#081217;font-weight:800;text-decoration:none;border:0;background:linear-gradient(180deg,var(--gold1),var(--gold2));box-shadow:0 12px 30px rgba(184,134,40,0.14);transition:transform .16s ease,box-shadow .16s ease}
   .btn-cta:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(184,134,40,0.2)}
-
   .btn-outline{display:inline-block;padding:10px 14px;border-radius:12px;color:var(--muted);background:transparent;border:1px solid rgba(255,255,255,0.04);text-decoration:none}
-
   .hero-right{width:320px;flex:0 0 320px;border-radius:12px;overflow:hidden;box-shadow:0 18px 50px rgba(2,6,23,0.7)}
   .hero-right img{width:100%;height:auto;display:block;object-fit:cover}
-
-  /* ===== Cards & sections ===== */
   section{margin-top:20px}
   .card{background:var(--panel);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 18px rgba(0,0,0,0.45)}
   .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
   .muted{color:var(--muted)}
-
-  /* Testimonials visual */
   .testimonials{display:flex;flex-direction:column;gap:12px}
   .titem{padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(0,0,0,0.02), rgba(255,255,255,0.01));border-left:4px solid var(--gold2)}
-
-  /* Compare table */
   .compare{width:100%;border-collapse:collapse;margin-top:12px}
   .compare th,.compare td{padding:12px;border:1px solid rgba(255,255,255,0.03);text-align:left}
   .before{background:rgba(255,255,255,0.02)}
   .after{background:linear-gradient(90deg, rgba(184,134,40,0.09), rgba(184,134,40,0.03))}
-
-  /* Payment block */
-  .pay-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px;border-radius:10px;background:rgba(0,0,0,0.12)}
+  .pay-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px;border-radius:10px;background:rgba(0,0,0,0.12);margin-top:10px}
   .pay-left{display:flex;flex-direction:column;gap:2px}
   .pay-actions{display:flex;gap:8px;align-items:center}
-
   .btn-copy{background:linear-gradient(180deg,#0a6a2f,#075522);color:#fff;padding:8px 12px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
   .btn-whatsapp{background:linear-gradient(180deg,#13a84a,#0a8a3a);color:#fff;padding:12px 16px;border-radius:12px;border:0;font-weight:800;cursor:pointer}
-
-  /* Footer */
   footer{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted);font-size:14px}
-
-  /* ===== Mobile optimizations ===== */
   @media(max-width:880px){
     .hero{flex-direction:column-reverse}
     .hero-right{width:100%;flex-basis:auto}
@@ -101,15 +67,11 @@
     h1{font-size:22px}
     .wrap{padding:18px;margin:12px}
   }
-
-  /* Performance: reduce shadows on very small screens */
   @media(max-width:420px){
     .hero-right{box-shadow:0 8px 18px rgba(0,0,0,0.45)}
     .btn-cta{padding:10px 14px}
     .btn-whatsapp{padding:10px 12px}
   }
-
-  /* small helper */
   .small{font-size:13px;color:var(--muted)}
 </style>
 </head>
@@ -132,12 +94,11 @@
       </div>
 
       <div class="hero-right" aria-hidden="true">
-        <!-- Cover image (promo.png) -->
         <img src="promo.png" alt="Capa do ebook — 12 Maneiras Reais">
       </div>
     </div>
 
-    <!-- BENEFÍCIOS (resumido) -->
+    <!-- BENEFÍCIOS -->
     <section aria-labelledby="beneficios-title">
       <h2 id="beneficios-title">Porque este ebook funciona?</h2>
       <div class="grid-3" role="list">
@@ -207,12 +168,12 @@
         <img src="promo.png" alt="Foto do autor" style="width:110px;border-radius:10px;flex:0 0 110px">
         <div>
           <strong>Jean Charles</strong>
-          <div class="muted small" style="margin-top:6px">Sou empreendedor digital e formador — ajudo moçambicanos a montar micro-negócios online usando apenas o telemóvel. te ajudarei a obter vendas reais.</div>
+          <div class="muted small" style="margin-top:6px">Sou empreendedor digital e formador — ajudo moçambicanos a montar micro-negócios online usando apenas o telemóvel. Já ajudei dezenas de alunos a obter vendas reais.</div>
         </div>
       </div>
     </section>
 
-    <!-- FINALIZAR (botões arrumados + copiar) -->
+    <!-- FINALIZAR -->
     <section id="finalizar">
       <h2>Finalizar compra</h2>
       <div class="card">
@@ -223,12 +184,12 @@
           </div>
         </div>
 
-        <div class="pay-row" style="margin-top:10px">
+        <div class="pay-row">
           <div class="pay-left"><strong>mMola</strong><div class="muted small">879071271</div></div>
           <div class="pay-actions"><button class="btn-copy" onclick="copyText('879071271')">Copiar</button></div>
         </div>
 
-        <div class="pay-row" style="margin-top:10px">
+        <div class="pay-row">
           <div class="pay-left"><strong>M-BIM</strong><div class="muted small">187092728</div></div>
           <div class="pay-actions"><button class="btn-copy" onclick="copyText('187092728')">Copiar</button></div>
         </div>
@@ -265,19 +226,13 @@
   </div>
 
 <script>
-  // Config
   const SELLER = "+258847363214";
-  const MPESA = "847363214";
-  const MMOLA = "879071271";
-  const MBIM = "187092728";
   const HOLDER = "Jean Charles";
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Copy helper
   function copyText(text){
     if(navigator.clipboard){
       navigator.clipboard.writeText(text).then(()=> {
-        // small mobile-friendly feedback
         const toast = document.createElement('div');
         toast.textContent = 'Número copiado: ' + text;
         toast.style.position = 'fixed';
@@ -297,31 +252,40 @@
     }
   }
 
-  // Smooth scroll helper for CTA
   function scrollToFinal(){
     const el = document.getElementById('finalizar');
     if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
   }
 
-  // Improved WhatsApp message (clean & professional)
   document.getElementById('whatsapp-btn').addEventListener('click', function(e){
     e.preventDefault();
     const message = encodeURIComponent(
       "Olá — já efectuei o pagamento do ebook (499 MT)." +
       "\\nMétodo: (M-Pesa / mMola / M-BIM)." +
       "\\nTitular: " + HOLDER + "." +
-      "\\nEnvio agora o comprovativo neste chat. Obrigado."
+      "\\nVou enviar o comprovativo neste chat. Obrigado."
     );
     const seller = SELLER.replace(/\+/g,'');
     window.open("https://wa.me/" + seller + "?text=" + message, "_blank");
   });
 
-  // Reduce motion for users who prefer it
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if(reduce.matches){
-    document.querySelectorAll('.btn-cta, .btn-whatsapp, .btn-copy').forEach(el=>{
-      el.style.transition = 'none';
+  document.querySelectorAll('.btn-cta, .btn-whatsapp, .btn-copy').forEach(el=>{
+    el.addEventListener('mouseover', ()=> el.style.transform = "translateY(-3px)");
+    el.addEventListener('mouseout', ()=> el.style.transform = "");
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      const id = this.getAttribute('href').substring(1);
+      const el = document.getElementById(id);
+      if(el) el.scrollIntoView({behavior:'smooth'});
     });
+  });
+
+  // Respect reduced motion
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('*').forEach(n=> n.style.transition='none');
   }
 </script>
 </body>
