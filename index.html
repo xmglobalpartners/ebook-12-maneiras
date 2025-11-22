@@ -1,377 +1,392 @@
 <!doctype html>
 <html lang="pt-MZ">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>12 Maneiras Reais — Ebook</title>
-<meta name="description" content="Guia prático para ganhar dinheiro online em Moçambique — Pagamento 499 MT. Envie comprovativo via WhatsApp."/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>12 Maneiras Reais — Landing Premium</title>
+<meta name="description" content="Guia prático para ganhar dinheiro online em Moçambique — Pagamento 499 MT. Envie comprovativo via WhatsApp." />
 <style>
+  /* ===== Theme & Layout ===== */
   :root{
-    --bg:#07131b;
-    --glass: rgba(255,255,255,0.03);
+    --bg-color:#07221a;
+    --overlay:rgba(4,10,6,0.45);
+    --card-bg:rgba(255,255,255,0.04);
     --accent:#0b7a3a;
     --gold:#d4af37;
-    --muted:#c0c9cf;
-    --white:#ffffff;
-    --maxW:1100px;
-    --radius:12px;
-    --card-pad:20px;
+    --muted:#cbd5e1;
+    --glass: rgba(255,255,255,0.03);
+    --radius:14px;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--white);-webkit-font-smoothing:antialiased}
-  .container{max-width:var(--maxW);margin:18px auto;padding:18px}
-  .card{background:var(--glass);border-radius:var(--radius);padding:var(--card-pad);box-shadow:0 6px 30px rgba(0,0,0,0.55)}
-  h1,h2{color:var(--gold);margin:0 0 10px 0}
-  p{color:var(--muted);margin:0 0 12px 0}
-  a{color:inherit}
-  /* ========== FLAG BACKDROP (blur across the page) ========== */
-  /* NOTE: this uses the image path present in the environment:
-     /mnt/data/A_digital_graphic_payment_instruction_graphic_prom.png
-     If you want to use a repo file named promo.png, replace the URL below by "promo.png" */
+  html,body{height:100%;margin:0;background:var(--bg-color);color:#fff}
+  /* Full-site background: premium with flag (low opacity) */
   body::before{
     content:"";
-    position:fixed;
-    inset:0;
-    background-image: url("/mnt/data/A_digital_graphic_payment_instruction_graphic_prom.png");
+    position:fixed;inset:0;
+    background-image: url('/mnt/data/A_digital_graphic_payment_instruction_graphic_prom.png');
     background-size:cover;
     background-position:center;
-    filter: blur(10px) saturate(0.9) contrast(0.9);
-    opacity:0.18;
-    pointer-events:none;
+    opacity:0.14;
+    filter: saturate(0.7) contrast(0.9);
     z-index:0;
   }
-  /* main layout sits above backdrop */
-  .site{position:relative;z-index:1}
-  /* ========== HERO ========== */
-  .hero-wrap{
-    position:relative;
-    border-radius:16px;
-    overflow:hidden;
-    padding:22px;
-    display:flex;
-    gap:20px;
-    align-items:center;
-    background:linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.40));
-  }
-  .hero{display:flex;flex-wrap:wrap;gap:18px;align-items:center;width:100%}
-  .hero-left{flex:1 1 460px;min-width:260px}
-  .hero-right{flex:0 0 320px}
-  .cover{border-radius:10px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.04)}
-  .cover img{display:block;width:100%;height:100%;object-fit:cover}
-  .price-badge{background:linear-gradient(90deg,var(--gold),#f2d27a);color:#06121a;padding:10px 14px;border-radius:10px;font-weight:800;display:inline-block}
-  .cta-row{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .page{position:relative;z-index:1;max-width:1100px;margin:28px auto;padding:28px;}
+  .container{background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.5));padding:28px;border-radius:16px;box-shadow:0 18px 60px rgba(2,6,23,0.7);}
+
+  /* ===== Hero ===== */
+  .hero{display:flex;gap:24px;align-items:center;flex-wrap:wrap;}
+  .hero-left{flex:1 1 420px;}
+  h1{font-size:30px;margin:0 0 10px;color:var(--gold);line-height:1.02}
+  p.lead{margin:0 0 14px;color:var(--muted)}
+  .price-badge{display:inline-block;background:linear-gradient(90deg,#0b7a3a,#0a8f3f);padding:10px 14px;border-radius:12px;font-weight:800;color:#fff;margin-right:12px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
   .btn{
-    background:linear-gradient(180deg,var(--accent),#067033);
-    color:var(--white);padding:12px 16px;border-radius:10px;border:0;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:8px;
-    transform:translateZ(0);transition:transform .12s ease, box-shadow .12s ease;
-    box-shadow:0 6px 20px rgba(11,122,58,0.15)
+    background:linear-gradient(180deg,var(--accent),#07662b);
+    color:#fff;padding:12px 18px;border-radius:12px;border:0;font-weight:800;text-decoration:none;cursor:pointer;
+    box-shadow:0 8px 30px rgba(11,122,58,0.14);transition:transform .18s ease,box-shadow .18s ease;
   }
-  .btn:active{transform:translateY(2px) scale(.997)}
-  .btn:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(11,122,58,0.18)}
-  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,0.06);color:var(--white)}
-  .small{font-size:13px;color:var(--muted)}
-  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
-  .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));padding:12px;border-radius:10px}
-  .bonus{background:linear-gradient(90deg, rgba(212,175,55,0.08), rgba(255,255,255,0.01));border:1px solid rgba(212,175,55,0.12);padding:14px;border-radius:10px}
-  .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
-  blockquote{background:rgba(255,255,255,0.02);padding:12px;border-left:4px solid rgba(212,175,55,0.85);border-radius:8px;color:#f6f6f4;margin:0}
+  .btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(11,122,58,0.22)}
+  .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:700}
+  .btn.pulse{animation: pulse 2.8s infinite;}
+  @keyframes pulse{
+    0%{box-shadow:0 8px 30px rgba(212,175,55,0.06)}
+    50%{box-shadow:0 22px 50px rgba(212,175,55,0.12)}
+    100%{box-shadow:0 8px 30px rgba(212,175,55,0.06)}
+  }
+
+  .hero-right{flex:0 0 320px;border-radius:12px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,0.5)}
+  .hero-right img{display:block;width:100%;height:100%;object-fit:cover}
+
+  /* ===== Sections ===== */
+  section{margin-top:22px}
+  .card{background:var(--card-bg);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(max-width:880px){ .grid-3{grid-template-columns:repeat(1,1fr)} .hero{flex-direction:column-reverse} .hero-right{width:100%} h1{font-size:22px} }
+
+  /* ===== Testimonials ===== */
+  .testimonials{display:flex;gap:12px;flex-wrap:wrap}
+  .titem{flex:1 1 280px;background:linear-gradient(180deg, rgba(0,0,0,0.04), rgba(255,255,255,0.01));padding:14px;border-radius:10px;border-left:4px solid var(--gold)}
+  .titem p{margin:6px 0;color:#fff}
+
+  /* ===== FAQ ===== */
+  .faq .q{margin-bottom:10px}
+  .question{font-weight:800;cursor:pointer;padding:10px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.02)}
+  .answer{display:none;padding:10px;margin-top:8px;background:rgba(0,0,0,0.15);border-radius:8px;color:var(--muted)}
+
+  /* ===== Who I am ===== */
+  .about{display:flex;gap:16px;align-items:center}
+  .avatar{flex:0 0 120px;border-radius:12px;overflow:hidden;border:3px solid rgba(255,255,255,0.03)}
+  .avatar img{width:120px;height:120px;object-fit:cover}
+  .about p{margin:0;color:var(--muted)}
+
+  /* ===== Comparison table ===== */
   .compare{width:100%;border-collapse:collapse;margin-top:12px}
-  .compare th,.compare td{padding:12px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left;color:var(--muted)}
-  .compare th{color:var(--gold);background:rgba(0,0,0,0.03)}
-  .badge-ok{background:rgba(11,122,58,0.12);color:var(--accent);padding:6px 8px;border-radius:8px;font-weight:700}
-  .purchase{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-top:12px}
-  .pay-list{min-width:240px;flex:1 1 300px}
-  .pay-row{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);margin-bottom:8px}
-  .copy-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:var(--white);cursor:pointer}
-  .countdown{display:inline-block;background:linear-gradient(90deg,#2a6b2a,#0b7a3a);padding:8px 12px;border-radius:10px;font-weight:800;color:#fff}
-  .about{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-  .about img{width:110px;border-radius:10px;object-fit:cover;border:2px solid rgba(255,255,255,0.04)}
-  .faq{margin-top:12px}
-  .faq .q{font-weight:700;margin-top:10px}
-  .faq .a{color:var(--muted);margin-top:6px}
-  footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.03)}
-  @media(max-width:860px){
-    .hero{flex-direction:column}
-    .hero-right{width:100%}
-  }
+  .compare th,.compare td{padding:12px;border:1px solid rgba(255,255,255,0.04);text-align:left}
+  .before{background:rgba(255,255,255,0.02)}
+  .after{background:linear-gradient(90deg, rgba(11,122,58,0.12), rgba(11,122,58,0.05))}
+
+  /* ===== Footer ===== */
+  footer{margin-top:26px;padding:20px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.02);border-radius:0 0 var(--radius) var(--radius);}
+
+  /* small helpers */
+  .muted{color:var(--muted)} .strong{color:var(--gold);font-weight:800}
 </style>
 </head>
 <body>
+  <div class="page">
+    <div class="container">
 
-<div class="site">
-  <div class="container">
-
-    <!-- HERO -->
-    <section class="hero-wrap card" aria-label="Hero">
-      <div class="hero">
+      <!-- HERO -->
+      <div class="hero" id="hero">
         <div class="hero-left">
           <h1>Descobre 12 Maneiras Reais de Ganhar Dinheiro Online em Moçambique</h1>
-          <p class="small">Guia prático, adaptado à realidade moçambicana — transforma o teu telemóvel numa fonte de renda.</p>
-
+          <p class="lead">Guia prático, adaptado à realidade moçambicana, que te ensina passo a passo como transformar o teu telemóvel numa fonte de renda — mesmo sem experiência.</p>
           <div class="cta-row">
             <span class="price-badge">499 MT</span>
-            <button class="btn" id="cta-buy">Quero o meu Ebook (499 MT)</button>
-            <a class="btn ghost" href="mailto:Trunkstruly@gmail.com?subject=Informações%20Ebook">Pedir informações</a>
-            <span style="margin-left:auto" class="countdown" id="countdown">A calcular...</span>
+            <button class="btn pulse" onclick="openBuy()">Quero o meu Ebook (499 MT)</button>
+            <a class="btn secondary" href="mailto:Trunkstruly@gmail.com?subject=Informações%20Ebook">Pedir informações</a>
           </div>
-
-          <div class="features" aria-hidden="false">
-            <div class="feature"><strong>Adaptado a Moçambique</strong><div class="small">Métodos & pagamentos locais.</div></div>
-            <div class="feature"><strong>Sem investimento</strong><div class="small">Começa com o que tens: o telemóvel.</div></div>
-            <div class="feature"><strong>Entrega imediata</strong><div class="small">Recebe via WhatsApp ou Email.</div></div>
-          </div>
-
+          <p class="muted" style="margin-top:8px">Entrega imediata em PDF • Pagamento via M-Pesa / mMola / M-BIM • Suporte via WhatsApp</p>
         </div>
 
         <div class="hero-right">
-          <div class="cover" role="img" aria-label="Capa do ebook">
-            <!-- CAPA PREMIUM: usa o ficheiro que está no ambiente (ver nota acima).
-                 Se preferires usar o ficheiro no repo, substitui por: src="promo.png" -->
-            <img src="/mnt/data/A_digital_graphic_payment_instruction_graphic_prom.png" alt="Capa premium do Ebook">
-          </div>
+          <!-- NOTE: this uses the promo image you uploaded to the repo.
+               If the image filename in your repo is promo.png keep this src,
+               otherwise replace with the exact filename. -->
+          <img src="promo.png" alt="Capa do Ebook">
         </div>
       </div>
-    </section>
 
-    <!-- O QUE VAI APRENDER -->
-    <section class="card" aria-label="Conteúdo">
-      <h2>O que vais aprender</h2>
-      <p class="small">Conteúdo prático, com modelos, scripts e planos — tudo o que precisas para começar.</p>
+      <!-- BENEFÍCIOS -->
+      <section id="beneficios" aria-labelledby="beneficios-title">
+        <h2 id="beneficios-title">Porque este ebook funciona?</h2>
+        <div class="grid-3">
+          <div class="card"><strong>Adaptado a Moçambique</strong><p class="muted">Estratégias pensadas para pagamentos, redes e comportamento local.</p></div>
+          <div class="card"><strong>Passo a passo</strong><p class="muted">Sem jargões. Segue e aplica.</p></div>
+          <div class="card"><strong>Funciona pelo telemóvel</strong><p class="muted">Todas as ideias testadas para smartphone.</p></div>
+          <div class="card"><strong>Sem investimento</strong><p class="muted">Muitas ideias exigem apenas tempo e esforço.</p></div>
+          <div class="card"><strong>Bónus práticos</strong><p class="muted">Templates, frases e plano de 30 dias incluídos.</p></div>
+          <div class="card"><strong>Acesso imediato</strong><p class="muted">Recebes o PDF após confirmação do pagamento.</p></div>
+        </div>
+      </section>
 
-      <div class="features" style="margin-top:12px">
-        <div class="feature"><strong>WhatsApp</strong><div class="small">Scripts que convertem.</div></div>
-        <div class="feature"><strong>Negócios sem investimento</strong><div class="small">Ideias para começar hoje.</div></div>
-        <div class="feature"><strong>Freelance internacional</strong><div class="small">Como conseguir clientes e negociar preços.</div></div>
-        <div class="feature"><strong>Facebook Marketplace</strong><div class="small">Anúncios que vendem todos os dias.</div></div>
-      </div>
-    </section>
+      <!-- CONTEÚDO -->
+      <section id="conteudo">
+        <h2>O que vais aprender</h2>
+        <div class="card">
+          <ul>
+            <li><strong>Como ganhar dinheiro pelo WhatsApp</strong> — scripts, sequências e opções de venda.</li>
+            <li><strong>Negócios digitais sem investimento</strong> — ideias para começar hoje.</li>
+            <li><strong>Trabalhar para empresas estrangeiras</strong> — plataformas, perfil e negociação.</li>
+            <li><strong>Facebook Marketplace</strong> — anúncios que vendem e gestão de entregas.</li>
+            <li><strong>Mini-agência digital</strong> — serviços fáceis de oferecer e cobrar via M-Pesa.</li>
+            <li><strong>Conteúdos virais</strong> — formatos que convertem em Moçambique.</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- BONUS -->
-    <section class="card">
-      <h2>Bónus exclusivos</h2>
-      <div class="bonus">
-        <ul>
-          <li>20 frases prontas para vender no WhatsApp</li>
-          <li>10 templates de posts para Facebook</li>
-          <li>Plano de ação de 30 dias</li>
-          <li>Lista de apps gratuitos para começar</li>
-        </ul>
-      </div>
-    </section>
+      <!-- BONUS -->
+      <section id="bonus">
+        <h2>Bónus exclusivos (gratuitos)</h2>
+        <div class="card">
+          <ul>
+            <li>20 frases prontas para vender no WhatsApp</li>
+            <li>10 templates para posts no Facebook</li>
+            <li>Plano de ação de 30 dias</li>
+            <li>Lista de apps gratuitos para começar já</li>
+          </ul>
+          <p class="muted"><em>Estes bónus serão pagos no futuro — agora estão incluídos na oferta de lançamento.</em></p>
+        </div>
+      </section>
 
-    <!-- PARA QUEM -->
-    <section class="card">
-      <h2>Para quem é este ebook?</h2>
-      <ul>
-        <li>Jovens que querem renda extra</li>
-        <li>Donas de casa e mães empreendedoras</li>
-        <li>Pequenos comerciantes e vendedores informais</li>
-        <li>Quem quer vender melhor no WhatsApp</li>
-      </ul>
-    </section>
+      <!-- PARA QUEM -->
+      <section id="paraquem">
+        <h2>Para quem é este ebook?</h2>
+        <div class="card">
+          <ul>
+            <li>Jovens que querem ganhar dinheiro com o telemóvel</li>
+            <li>Mães e donas de casa que procuram renda extra</li>
+            <li>Pessoas desempregadas</li>
+            <li>Pequenos comerciantes que precisam de marketing</li>
+            <li>Quem quer vender melhor no WhatsApp</li>
+          </ul>
+        </div>
+      </section>
 
-    <!-- TESTEMUNHOS -->
-    <section class="card" aria-label="Testemunhos">
-      <h2>O que dizem leitores</h2>
-      <div class="testimonials">
-        <blockquote>“Segui os scripts do WhatsApp e fiz as primeiras vendas em 2 dias.” — <em>Maria, Maputo</em></blockquote>
-        <blockquote>“A parte do Facebook Marketplace mudou o meu pequeno negócio.” — <em>Carlos, Matola</em></blockquote>
-        <blockquote>“Ganhei clientes estrangeiros em menos de um mês.” — <em>Fatima, Nampula</em></blockquote>
-      </div>
-    </section>
+      <!-- TESTEMUNHOS -->
+      <section id="testemunhos">
+        <h2>Testemunhos reais</h2>
+        <div class="testimonials">
+          <!-- IMPORTANT: replace the placeholder texts below with actual customer testimonials -->
+          <div class="titem">
+            <p class="muted">“Segui os passos do módulo do WhatsApp e fiz as minhas primeiras vendas em 4 dias.”</p>
+            <p><strong>— Maria, Maputo</strong></p>
+          </div>
+          <div class="titem">
+            <p class="muted">“Comecei a organizar os meus produtos no Marketplace e aumentei as vendas semanais.”</p>
+            <p><strong>— Carlos, Matola</strong></p>
+          </div>
+          <div class="titem">
+            <p class="muted">“O plano de 30 dias deu-me disciplina — hoje já obtenho rendimento extra todo mês.”</p>
+            <p><strong>— Amélia, Nampula</strong></p>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:8px"><em>Substitui estes exemplos por testemunhos reais dos teus clientes (nome + cidade + frase curta).</em></p>
+      </section>
 
-    <!-- COMPARAÇÃO -->
-    <section class="card" aria-label="Comparação">
-      <h2>Antes vs Depois</h2>
-      <table class="compare" role="table" aria-label="Antes Depois">
-        <thead><tr><th>Estado</th><th>Antes</th><th>Depois</th></tr></thead>
-        <tbody>
-          <tr><td>Vendas por mês</td><td class="muted">0–50</td><td><span class="badge-ok">+50–200</span></td></tr>
-          <tr><td>Dependência de loja física</td><td class="muted">Alta</td><td><span class="badge-ok">Baixa — vendas online</span></td></tr>
-          <tr><td>Investimento inicial</td><td class="muted">Alto</td><td><span class="badge-ok">Baixo / Zero</span></td></tr>
-          <tr><td>Tempo para ver resultados</td><td class="muted">Sem previsão</td><td><span class="badge-ok">7–30 dias</span></td></tr>
-        </tbody>
-      </table>
-    </section>
+      <!-- COMPARAÇÃO ANTES / DEPOIS -->
+      <section id="comparacao">
+        <h2>Tabela comparativa — Antes vs Depois</h2>
+        <table class="compare" role="table" aria-label="Comparação Antes e Depois">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="before">Antes</th>
+              <th class="after">Depois (com o ebook)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Vendas mensais</td>
+              <td class="before">0–3 vendas</td>
+              <td class="after">10+ vendas possíveis</td>
+            </tr>
+            <tr>
+              <td>Dependência de clientes locais</td>
+              <td class="before">Alta</td>
+              <td class="after">Diversificada (online + remoto)</td>
+            </tr>
+            <tr>
+              <td>Conhecimento de anúncios</td>
+              <td class="before">Baixo</td>
+              <td class="after">Templates + scripts prontos</td>
+            </tr>
+            <tr>
+              <td>Receitas</td>
+              <td class="before">Irregular</td>
+              <td class="after">Mais previsíveis e escaláveis</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-    <!-- QUEM SOU EU -->
-    <section class="card about" aria-label="Quem sou eu">
-      <div style="flex:0 0 120px">
-        <!-- usa promo.png (ou a mesma premium) como placeholder -->
-        <img src="/mnt/data/A_digital_graphic_payment_instruction_graphic_prom.png" alt="Jean Charles foto">
-      </div>
-      <div>
+      <!-- QUEM SOU EU -->
+      <section id="quemsou">
         <h2>Quem sou eu</h2>
-        <p class="small">Sou Jean Charles — empreendedor digital e consultor de micro-negócios em Moçambique. Ajudei dezenas de pequenos empreendedores a transformar o telemóvel em fonte de renda usando estratégias práticas e testadas.</p>
-        <p class="small"><strong>Contacto:</strong> Trunkstruly@gmail.com • WhatsApp: +258847363214</p>
-      </div>
-    </section>
-
-    <!-- COMPRA -->
-    <section class="card" id="comprar" aria-label="Comprar">
-      <h2>Finalizar compra</h2>
-      <div class="purchase">
-        <div class="pay-list">
-          <div class="pay-row"><div><strong>M-Pesa</strong><div class="small">847363214</div></div><div><button class="copy-btn" data-copy="847363214">Copiar</button></div></div>
-          <div class="pay-row"><div><strong>mMola</strong><div class="small">879071271</div></div><div><button class="copy-btn" data-copy="879071271">Copiar</button></div></div>
-          <div class="pay-row"><div><strong>M-BIM</strong><div class="small">187092728</div></div><div><button class="copy-btn" data-copy="187092728">Copiar</button></div></div>
-          <p class="small">Titular: <strong>Jean Charles</strong></p>
-        </div>
-
-        <div style="flex:1 1 320px">
-          <p class="small">Após o pagamento, envia o comprovativo pelo WhatsApp — receberás o PDF no mesmo chat ou por email.</p>
-          <div style="display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap">
-            <a class="btn" id="btn-wa" href="https://wa.me/258847363214?text=Olá%2C+quero+comprar+o+ebook+499+MT">Enviar comprovativo via WhatsApp</a>
-            <button class="btn ghost" id="btn-instr">Como pagar</button>
+        <div class="card about">
+          <div class="avatar">
+            <!-- If you have a personal photo, replace src below with your photo filename -->
+            <img src="promo.png" alt="Foto do autor">
+          </div>
+          <div>
+            <p class="strong">Jean Charles</p>
+            <p class="muted">Sou empreendedor digital e formador — ajudo moçambicanos a montar micro-negócios online utilizando apenas o telemóvel. Já ajudei dezenas de alunos a transformar ideias em vendas reais.</p>
+            <p class="muted">Se quiseres, envia testemunhos reais e eu coloco aqui com destaque.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FAQ -->
-    <section class="card faq" aria-label="FAQ">
-      <h2>Perguntas frequentes (FAQ)</h2>
+      <!-- PREÇO / CTA FINAL -->
+      <section id="preco-cta">
+        <h2>Oferta de lançamento</h2>
+        <div class="card">
+          <p><strong>Preço de lançamento:</strong> <span class="strong">499 MT</span></p>
+          <ul>
+            <li>Pagamento via M-Pesa / mMola / M-BIM</li>
+            <li>Envio imediato do PDF após confirmação</li>
+            <li>Suporte básico via WhatsApp</li>
+          </ul>
+          <div style="margin-top:12px">
+            <button class="btn" onclick="openBuy()">Enviar comprovativo pelo WhatsApp</button>
+            <a class="btn secondary" href="#quemsou" style="margin-left:8px">Saber mais sobre o autor</a>
+          </div>
+        </div>
+      </section>
 
-      <div class="q">1) Quanto tempo demora a receber o e-book?</div>
-      <div class="a">Normalmente enviamos o PDF em até 10–30 minutos após confirmação do pagamento e envio do comprovativo via WhatsApp. Em horários de pico pode demorar até 1 hora.</div>
+      <!-- COMO FUNCIONA + FORM MODAL TRIGGER -->
+      <section id="como-funciona">
+        <h2>Como funciona a compra?</h2>
+        <div class="card">
+          <ol>
+            <li>Clicas em “Enviar comprovativo”</li>
+            <li>Fazes o pagamento (M-Pesa / mMola / M-BIM)</li>
+            <li>Anexas o comprovativo no WhatsApp</li>
+            <li>Recebes o PDF instantaneamente</li>
+            <li>Começas a aplicar os métodos</li>
+          </ol>
+          <p class="muted">Números para pagamento e titular estão na janela de confirmação — o processo é rápido e manual (recebemos o comprovativo e devolvemos o PDF).</p>
+        </div>
+      </section>
 
-      <div class="q">2) Posso pagar com outro número?</div>
-      <div class="a">Sim — podes usar qualquer conta M-Pesa/mMola/BIM para transferir. O importante é enviar o comprovativo e o nome usado no pagamento.</div>
+      <!-- BOTÕES DE PAGAMENTO (detalhado) -->
+      <section id="comprar" aria-labelledby="comprar-title">
+        <h2 id="comprar-title">Finalizar compra</h2>
+        <div class="card">
+          <p><strong>M-Pesa:</strong> 847363214</p>
+          <p><strong>mMola:</strong> 879071271</p>
+          <p><strong>M-BIM:</strong> 187092728</p>
+          <p><strong>Titular:</strong> Jean Charles</p>
+          <div style="margin-top:12px">
+            <!-- WhatsApp opens with encoded message; seller number set below in JS -->
+            <a class="btn" id="open-whatsapp" href="#">Enviar comprovativo via WhatsApp</a>
+            <a class="btn secondary" href="mailto:Trunkstruly@gmail.com?subject=Compra%20Ebook">Enviar por Email</a>
+          </div>
+          <p class="muted" style="margin-top:10px">Após enviar, por favor aguarda a confirmação — enviamos o PDF no mesmo chat do WhatsApp.</p>
+        </div>
+      </section>
 
-      <div class="q">3) E se eu não ficar satisfeito?</div>
-      <div class="a">Oferecemos suporte e substituições de bônus; para reembolsos, contacta-nos via WhatsApp para analisarmos o caso.</div>
+      <!-- FAQ -->
+      <section id="faq">
+        <h2>FAQ — Perguntas Frequentes</h2>
+        <div class="card faq">
+          <div class="q">
+            <div class="question" data-target="a1">1) Quanto tempo demora para receber o ebook?</div>
+            <div class="answer" id="a1">Recebes o PDF normalmente em menos de 30 minutos após confirmação do pagamento; salvo fins de semana muito movimentados.</div>
+          </div>
+          <div class="q">
+            <div class="question" data-target="a2">2) Posso pagar com outro método?</div>
+            <div class="answer" id="a2">Aceitamos M-Pesa, mMola e M-BIM. Para outros métodos escreve para o email: Trunkstruly@gmail.com.</div>
+          </div>
+          <div class="q">
+            <div class="question" data-target="a3">3) Posso pedir reembolso?</div>
+            <div class="answer" id="a3">Oferecemos suporte e substituições de material. Reembolsos são avaliados caso a caso — recomendamos ler o conteúdo e aplicar; se houver problema, contacta-nos.</div>
+          </div>
+        </div>
+      </section>
 
-      <div class="q">4) Recebo atualizações do e-book?</div>
-      <div class="a">Sim — compradores recebem atualizações e novos bônus por email/WhatsApp sem custos adicionais.</div>
-    </section>
+      <!-- RODAPÉ (profissional) -->
+      <footer>
+        <div style="max-width:900px;margin:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center">
+          <div>
+            <strong>Jean Charles</strong><br><span class="muted">Formador & Empreendedor Digital</span>
+          </div>
+          <div class="muted">Contacto: <a href="mailto:Trunkstruly@gmail.com" style="color:var(--gold);text-decoration:none">Trunkstruly@gmail.com</a> • WhatsApp: <a href="https://wa.me/258847363214" style="color:var(--gold);text-decoration:none">+258 84 736 3214</a></div>
+        </div>
+        <div style="margin-top:12px;color:rgba(255,255,255,0.35)">© <span id="year"></span> — Todos os direitos reservados.</div>
+      </footer>
 
-    <!-- CTA FINAL -->
-    <section class="card" style="text-align:center">
-      <h2>Pronto para começar a ganhar?</h2>
-      <p class="small">Clica abaixo, faz o pagamento e envia o comprovativo — eu envio o e-book imediatamente.</p>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px">
-        <button class="btn" id="final-buy">Quero o Ebook (499 MT)</button>
-        <a class="btn ghost" href="mailto:Trunkstruly@gmail.com?subject=Dúvidas%20Ebook">Dúvidas? Envia email</a>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-        <div><strong>Jean Charles</strong><br><span class="small">Empreendedor Digital • Consultor</span></div>
-        <div class="small">Contacto: Trunkstruly@gmail.com • WhatsApp: +258847363214</div>
-        <div class="small">© <span id="year"></span> — Todos os direitos reservados</div>
-      </div>
-    </footer>
-
+    </div>
   </div>
-</div>
 
 <script>
-  // ====== CONFIG ======
+  // ===== Configs =====
   const SELLER_WHATSAPP = "+258847363214";
   const MPESA = "847363214";
   const MMOLA = "879071271";
   const MBIM = "187092728";
   const ACCOUNT_HOLDER = "Jean Charles";
 
-  // Countdown: define data fixa ou relativo
-  // Exemplo de data fixa:
-  // const SALE_END = new Date("2025-12-01T23:59:00");
-  // Por defeito deixei 3 dias a partir de agora:
-  const SALE_END = new Date(new Date().getTime() + 3*24*60*60*1000);
-
-  function formatCountdown(diff) {
-    if (diff <= 0) return null;
-    const days = Math.floor(diff / (1000*60*60*24));
-    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-    const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
-    const secs = Math.floor((diff % (1000*60)) / 1000);
-    return `${days}d ${String(hours).padStart(2,'0')}h ${String(mins).padStart(2,'0')}m ${String(secs).padStart(2,'0')}s`;
-  }
-
-  (function initCountdown(){
-    const el = document.getElementById('countdown');
-    if(!el){
-      console.warn("Countdown element não encontrado.");
-      return;
-    }
-    el.textContent = "A calcular...";
-    function tick(){
-      try {
-        const now = new Date();
-        const diff = SALE_END - now;
-        const txt = formatCountdown(diff);
-        if(txt){
-          el.textContent = txt;
-        } else {
-          el.textContent = "Promoção terminada";
-          clearInterval(timer);
-        }
-      } catch(err){
-        console.error("Erro no countdown:", err);
-        el.textContent = "Promoção";
-        clearInterval(timer);
-      }
-    }
-    tick();
-    const timer = setInterval(tick,1000);
-  })();
-
-  // Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Copy buttons
-  document.querySelectorAll('.copy-btn').forEach(btn=>{
-    btn.addEventListener('click',function(){
-      const v = btn.getAttribute('data-copy');
-      navigator.clipboard.writeText(v).then(()=> {
-        const prev = btn.textContent;
-        btn.textContent = "Copiado ✓";
-        setTimeout(()=> btn.textContent = prev,1500);
-      }).catch(()=> alert("Copia manualmente: "+v));
+  // ===== FAQ toggle =====
+  document.querySelectorAll('.question').forEach(q=>{
+    q.addEventListener('click', ()=>{
+      const id = q.dataset.target;
+      const a = document.getElementById(id);
+      if(!a) return;
+      a.style.display = (a.style.display === 'block') ? 'none' : 'block';
     });
   });
 
-  // CTA: prompt + open whatsapp
-  function openWhatsAppPrompt(pref){
-    const name = prompt("Nome completo (ex.: Maria da Silva):");
-    if(!name) return alert("Precisamos do teu nome.");
-    const prefer = pref || prompt("Receber por (whatsapp/email): escreva 'whatsapp' ou 'email'","whatsapp");
-    let contact = "";
-    if(prefer === "whatsapp"){
-      contact = prompt("Número de WhatsApp para receber o PDF (ex: +2588...):");
-      if(!contact) return alert("Indique o número de WhatsApp.");
-    } else {
-      contact = prompt("Email para receber o PDF:");
-      if(!contact) return alert("Indique um email.");
-    }
-    const method = prompt("Método de pagamento: escreva 'M-Pesa', 'mMola' ou 'M-BIM'","M-Pesa");
-    let dest = MPESA;
-    if(method && method.toLowerCase().includes("mmola")) dest = MMOLA;
-    if(method && method.toLowerCase().includes("m-bim")) dest = MBIM;
-    const msg = `Olá! Já efectuei o pagamento do ebook (499 MT).\nMétodo: ${method}\nPara: ${dest}\nTitular: ${ACCOUNT_HOLDER}\nNome: ${name}\n${prefer === "whatsapp" ? "Receber no WhatsApp: "+contact : "Receber no email: "+contact}\nVou enviar o comprovativo (screenshot) neste chat. Obrigado.`;
-    const wa = "https://wa.me/"+SELLER_WHATSAPP.replace("+","")+"?text="+encodeURIComponent(msg);
-    window.open(wa,"_blank");
+  // ===== Open buy modal (simple scroll to comprar) =====
+  function openBuy(){
+    document.getElementById('comprar').scrollIntoView({behavior:'smooth'});
+    // small pulse visual on the whatsapp button
+    const btn = document.getElementById('open-whatsapp');
+    btn.style.transform = 'translateY(-3px)';
+    setTimeout(()=> btn.style.transform = '', 400);
   }
 
-  document.getElementById('cta-buy').addEventListener('click',()=> openWhatsAppPrompt('whatsapp'));
-  document.getElementById('final-buy').addEventListener('click',()=> openWhatsAppPrompt('whatsapp'));
-  document.getElementById('btn-wa').addEventListener('click',()=> window.open("https://wa.me/"+SELLER_WHATSAPP.replace("+","")+"?text="+encodeURIComponent("Olá, já efectuei o pagamento do ebook (499 MT). Vou enviar o comprovativo."), "_blank"));
-
-  // instructions button
-  document.getElementById('btn-instr').addEventListener('click',function(){
-    alert("1) Escolhe um método (M-Pesa / mMola / BIM)\n2) Paga 499 MT para o número respetivo\n3) Guarda screenshot\n4) Clica 'Enviar comprovativo via WhatsApp' e anexa o screenshot\n5) Recebes o PDF em até 30 minutos.");
+  // ===== WhatsApp button (opens chat with pre-filled message) =====
+  document.getElementById('open-whatsapp').addEventListener('click', function(e){
+    e.preventDefault();
+    const msg = encodeURIComponent(
+      "Olá! Já efectuei o pagamento do ebook (499 MT).%0A" +
+      "Método: [insere o método: M-Pesa / mMola / M-BIM]%0A" +
+      "Para: " + (MPESA) + "%0A" +
+      "Titular: " + ACCOUNT_HOLDER + "%0A" +
+      "Nome: [o teu nome completo]%0A" +
+      "Vou enviar o comprovativo (screenshot) neste chat. Obrigado."
+    );
+    const seller = SELLER_WHATSAPP.replace(/\+/g,'');
+    window.open("https://wa.me/" + seller + "?text=" + msg, "_blank");
   });
 
-  // button micro-animations (subtle)
+  // ===== Small animation on CTA buttons (subtle) =====
   document.querySelectorAll('.btn').forEach(b=>{
-    b.addEventListener('mouseenter',()=> b.style.transform = 'translateY(-4px) scale(1.01)');
-    b.addEventListener('mouseleave',()=> b.style.transform = '');
-    b.addEventListener('focus',()=> b.style.outline = '2px solid rgba(212,175,55,0.28)');
-    b.addEventListener('blur',()=> b.style.outline = 'none');
+    b.addEventListener('mouseover', ()=> b.style.transform = "translateY(-4px)");
+    b.addEventListener('mouseout', ()=> b.style.transform = "");
   });
 
+  // ===== Smooth anchors (internal) =====
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      const id = this.getAttribute('href').substring(1);
+      const el = document.getElementById(id);
+      if(el) el.scrollIntoView({behavior:'smooth'});
+    });
+  });
 </script>
 </body>
 </html>
